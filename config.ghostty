@@ -1,0 +1,39 @@
+window-decoration=none
+
+# --- FONT & TYPOGRAPHY ---
+# Hack has wide apertures and distinct characters (e.g., 1, l, I).
+font-family = "Hack Nerd Font"
+
+# Set this large enough that you NEVER lean forward. 
+# Lean back in your chair; if you squint, increase this number.
+font-size = 14
+
+# The "Return Sweep" Fix:
+# Increases the vertical space in the terminal by 35%, granting a ~1.35x line height.
+# This prevents eyes from accidentally skipping lines when moving left.
+adjust-cell-height = 35% 
+
+
+# --- COLOR & CONTRAST ---
+# Set theme based on room lighting. 
+# (Run `ghostty +list-themes` in your terminal to see all available themes. 
+# "zenbones" and "alabaster" are also natively supported).
+theme = noctalia
+
+# This is Ghostty's safety net. If an arbitrary CLI tool tries to print 
+# invisible text (like dark-grey comments on a black background), Ghostty will 
+# shift the color until it clears this ratio. Keep it low enough that themes 
+# render as designed (zenbones slots are already readable).
+minimum-contrast = 2
+
+
+# --- ENVIRONMENT & FOCUS ---
+# Adds a physical margin inside the terminal window. Text that touches the edge of 
+# a high-contrast monitor bezel increases cognitive strain.
+window-padding-x = 20
+window-padding-balance = true
+
+# A blinking cursor constantly triggers peripheral motion detectors in your retina, 
+# acting as a micro-distraction. A solid block reduces visual noise.
+cursor-style = block
+cursor-style-blink = false
