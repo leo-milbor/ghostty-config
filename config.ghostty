@@ -1,24 +1,32 @@
-window-decoration=none
+mouse-hide-while-typing = true
+macos-non-native-fullscreen = visible-menu
+macos-option-as-alt = true
+# Automatically center the terminal surface when resizing the window
+window-padding-balance = true
+# Achieve a strict focus mode by hiding the native titlebar/chrome
+window-decoration = false
 
 # --- FONT & TYPOGRAPHY ---
 # Hack has wide apertures and distinct characters (e.g., 1, l, I).
-font-family = "Hack Nerd Font"
-
+font-family = "Hack Nerd Font Mono"
+# Use a thicker font weight to improve readability on MacOS Retina displays
+font-thicken = true
 # Set this large enough that you NEVER lean forward. 
 # Lean back in your chair; if you squint, increase this number.
-font-size = 14
-
-# The "Return Sweep" Fix:
-# Increases the vertical space in the terminal by 35%, granting a ~1.35x line height.
+font-size = 16
 # This prevents eyes from accidentally skipping lines when moving left.
-adjust-cell-height = 35% 
-
+adjust-cell-height = 20% 
+# Deactivate all ligatures
+# (calt = contextual ligatures, liga = standard ligatures, dlig = discretionary ligatures)
+font-feature = "-calt"
+font-feature = "-liga"
+font-feature = "-dlig"
 
 # --- COLOR & CONTRAST ---
 # Set theme based on room lighting. 
 # (Run `ghostty +list-themes` in your terminal to see all available themes. 
 # "zenbones" and "alabaster" are also natively supported).
-theme = noctalia
+theme = dark:forestbones_dark,light:forestbones_light
 
 # This is Ghostty's safety net. If an arbitrary CLI tool tries to print 
 # invisible text (like dark-grey comments on a black background), Ghostty will 
@@ -37,3 +45,4 @@ window-padding-balance = true
 # acting as a micro-distraction. A solid block reduces visual noise.
 cursor-style = block
 cursor-style-blink = false
+
